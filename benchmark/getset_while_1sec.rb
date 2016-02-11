@@ -5,7 +5,7 @@ require File.expand_path("#{File.dirname(__FILE__)}/helper.rb")
 job = lambda {|kt|
   cnt = 0
   begin
-    timeout(1){
+    Timeout.timeout(1){
       loop do
         kt[:foo] = :bar
         kt[:foo]
